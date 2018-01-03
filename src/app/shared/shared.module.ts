@@ -5,7 +5,8 @@ import {
   MatIconModule,
   MatButtonModule,
   MatCardModule,
-  MatInputModule
+  MatInputModule,
+  MatListModule
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -18,7 +19,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   exports: [
     CommonModule,
@@ -27,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatButtonModule,
     MatCardModule,
     MatInputModule,
-    HttpClientModule
+    HttpClientModule,
+    MatListModule
   ],
   declarations: []
 })
