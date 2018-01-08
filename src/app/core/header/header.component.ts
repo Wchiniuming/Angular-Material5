@@ -10,6 +10,8 @@ import { DomSanitizer } from '@angular/platform-browser';
 export class HeaderComponent implements OnInit {
 
   @Output() toggle = new EventEmitter<void>();
+  @Output() toggledarktheme = new EventEmitter<boolean>();
+  light = true;
 
   constructor() {
    }
@@ -19,5 +21,10 @@ export class HeaderComponent implements OnInit {
 
   openSidebar() {
     this.toggle.emit();
+  }
+
+  onChange(checked: boolean) {
+    this.toggledarktheme.emit(checked);
+    this.light = !this.light;
   }
 }
