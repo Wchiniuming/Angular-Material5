@@ -11,6 +11,7 @@ import {
   MatGridListModule,
   MatDialogModule,
 } from '@angular/material';
+import { OverlayContainer } from '@angular/cdk/overlay';
 import { HttpClientModule } from '@angular/common/http';
 
 
@@ -26,7 +27,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    OverlayContainer
   ],
   exports: [
     CommonModule,
@@ -39,7 +41,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatListModule,
     MatSlideToggleModule,
     MatGridListModule,
-    MatDialogModule
+    MatDialogModule,
+    OverlayContainer
   ],
   declarations: []
 })

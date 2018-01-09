@@ -10,7 +10,7 @@ export class NewProjectComponent implements OnInit {
 
   constructor(
     @Inject(MAT_DIALOG_DATA) private data,
-    private dialogRef: MatDialogRef<NewProjectComponent>
+    private dialogRef: MatDialogRef<NewProjectComponent>,
   ) { }
 
   ngOnInit() {
