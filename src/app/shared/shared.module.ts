@@ -9,6 +9,7 @@ import {
   MatListModule,
   MatSlideToggleModule,
   MatGridListModule,
+  MatDialogModule,
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -24,7 +25,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatListModule,
     MatSlideToggleModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   exports: [
     CommonModule,
@@ -36,7 +38,8 @@ import { HttpClientModule } from '@angular/common/http';
     HttpClientModule,
     MatListModule,
     MatSlideToggleModule,
-    MatGridListModule
+    MatGridListModule,
+    MatDialogModule
   ],
   declarations: []
 })

@@ -8,6 +8,7 @@ import { LoginModule } from './login/login.module';
 import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
+import { ProjectModule } from './project/project.module';
 
 
 @NgModule({
@@ -20,7 +21,8 @@ import { AppComponent } from './app.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    LoginModule
+    LoginModule,
+    ProjectModule
   ],
   providers: [],
   bootstrap: [AppComponent]
