@@ -5,7 +5,7 @@ export const loadSvgResources = (ir: MatIconRegistry, ds: DomSanitizer) => {
     const svgDir = 'assets/svg';
     const dayDir = `${svgDir}/days`;
     const avatarsDir = `${svgDir}/avatars`;
-    const IconsDir = `assets/img/icons`;
+    const IconsDir = 'assets/img/icons';
     ir.addSvgIconSetInNamespace('avatars', ds.bypassSecurityTrustResourceUrl(`${avatarsDir}/avatars.svg`));
     ir.addSvgIcon('projects', ds.bypassSecurityTrustResourceUrl(`${svgDir}/sidebar/projects.svg`));
     ir.addSvgIcon('month', ds.bypassSecurityTrustResourceUrl(`${svgDir}/sidebar/month.svg`));

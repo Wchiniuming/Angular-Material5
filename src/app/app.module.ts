@@ -9,6 +9,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { CoreModule } from './core/core.module';
 import { AppComponent } from './app.component';
 import { ProjectModule } from './project/project.module';
+import { TaskModule } from './task/task.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { ProjectModule } from './project/project.module';
     BrowserAnimationsModule,
     AppRoutingModule,
     LoginModule,
-    ProjectModule
+    ProjectModule,
+    TaskModule
   ],
   providers: [],
   bootstrap: [AppComponent]
