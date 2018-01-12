@@ -3,7 +3,7 @@
     'priority-important': item.priority === 2,
     'priority-emergency': item.priority === 1
 }">
-  <mat-checkbox class="completion-status" [(checked)]="item.completed" color="primary">
+  <mat-checkbox class="completion-status" [(ngModel)]="item.completed" color="primary">
   </mat-checkbox>
   <div class="content" matLine [ngClass]="{'completed': item.completed}">
     <span [matTooltip]="item.desc">{{item.desc}}</span>
@@ -16,3 +16,4 @@
   </div>
   <mat-icon class="mat-18 avatar" [svgIcon]="avatar" matListAvatar></mat-icon>
 </mat-list-item>
+

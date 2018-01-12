@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 import {
   MatToolbarModule,
   MatIconModule,
@@ -35,7 +36,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -52,7 +54,8 @@ import { HttpClientModule } from '@angular/common/http';
     MatAutocompleteModule,
     MatMenuModule,
     MatCheckboxModule,
-    MatTooltipModule
+    MatTooltipModule,
+    FormsModule
   ],
   declarations: []
 })
