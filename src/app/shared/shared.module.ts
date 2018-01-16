@@ -15,6 +15,9 @@ import {
   MatMenuModule,
   MatCheckboxModule,
   MatTooltipModule,
+  MatRadioModule,
+  MatDatepickerModule,
+  MatNativeDateModule,
 } from '@angular/material';
 // import { OverlayContainer } from '@angular/cdk/overlay';
 import { HttpClientModule } from '@angular/common/http';
@@ -37,7 +40,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   exports: [
     CommonModule,
@@ -55,7 +61,10 @@ import { HttpClientModule } from '@angular/common/http';
     MatMenuModule,
     MatCheckboxModule,
     MatTooltipModule,
-    FormsModule
+    FormsModule,
+    MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule
   ],
   declarations: []
 })

@@ -38,7 +38,7 @@ export class ProjectListComponent implements OnInit {
   }
 
   openNewProjectDialog() {
-    this.dialog.open(NewProjectComponent, {data: 'this is a new dialog'});
+    this.dialog.open(NewProjectComponent);
   }
 
   InviteMember() {
