@@ -1,27 +1,27 @@
 <form action="">
   <h1 matDialogTitle>新建任务</h1>
   <mat-dialog-content>
-    <mat-input-container>
+    <mat-input-container class="full-fill">
       <input matInput type="text" required placeholder="任务描述">
     </mat-input-container>
-    <mat-radio-group [align]="'start'">
-      <mat-radio-button *ngFor="let prioridty of prioridtys" name="stutus" [value]="prioridty.value">
-        {{prioridty.name}}
+    <mat-radio-group>
+      <mat-radio-button *ngFor="let prioridty of prioridtys" name="prioridty" [value]="prioridty.value">
+        {{prioridty.label}}
       </mat-radio-button>
     </mat-radio-group>
-    <mat-form-field>
+    <mat-form-field class="full-fill">
       <input matInput [matDatepicker]="duedatePickerRef" placeholder="任务截止日期">
       <mat-datepicker-toggle matSuffix [for]="duedatePickerRef"></mat-datepicker-toggle>
       <mat-datepicker #duedatePickerRef></mat-datepicker>
     </mat-form-field>
-    <mat-form-field>
+    <mat-form-field class="full-fill">
       <input matInput [matDatepicker]="reminderdatePickerRef" placeholder="提醒日期">
       <mat-datepicker-toggle matSuffix [for]="reminderdatePickerRef"></mat-datepicker-toggle>
       <mat-datepicker #reminderdatePickerRef></mat-datepicker>
     </mat-form-field>
   </mat-dialog-content>
-  <mat-dialog-actions>
-    <button mat-fab-button color="accent">保存</button>
-    <button mat-fab-button matDialogClose>关闭</button>
+  <mat-dialog-actions class="action-right">
+    <button mat-raised-button color="accent">保存</button>
+    <button mat-button matDialogClose>关闭</button>
   </mat-dialog-actions>
 </form>

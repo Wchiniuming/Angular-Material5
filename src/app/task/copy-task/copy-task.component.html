@@ -1,0 +1,13 @@
+<form>
+  <h3>移动所选择的任务</h3>
+  <mat-select placeholder="请选择目标列表" [required]="" floatPlaceholder="always">
+    <mat-option *ngFor="let list of lists" [value]="list">
+      {{ list.name }}
+    </mat-option>
+  </mat-select>
+  <mat-dialog-actions class="action-right">
+      <button mat-raised-button color="accent">保存</button>
+      <button mat-button matDialogClose>关闭</button>
+    </mat-dialog-actions>
+</form>
+

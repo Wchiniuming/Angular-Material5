@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewTaskComponent } from '../new-task/new-task.component';
+import { NewTasklistComponent } from '../new-tasklist/new-tasklist.component';
+import { CopyTaskComponent } from '../copy-task/copy-task.component';
 
 @Component({
   selector: 'app-task-home',
@@ -119,8 +121,14 @@ export class TaskHomeComponent implements OnInit {
   ngOnInit() {
   }
 
-  addingTask() {
+  openNewTaskDialog() {
     this.dialog.open(NewTaskComponent);
   }
 
+  openNewTasklistDialog() {
+    this.dialog.open(NewTasklistComponent);
+  }
+  openCopyTaskDialog() {
+    this.dialog.open(CopyTaskComponent, {data: {lists: this.lists}});
+  }
 }

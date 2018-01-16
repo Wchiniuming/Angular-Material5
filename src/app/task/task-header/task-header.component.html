@@ -19,7 +19,7 @@
         <mat-icon class="mat-18">mode_edit</mat-icon>
         <span>修改列表名称</span>
       </button>
-      <button mat-menu-item>
+      <button mat-menu-item (click)="OnMoveAllClick()">
           <mat-icon class="mat-18 material-icon" [svgIcon]="'move'"></mat-icon>
           <span>移动列表内容</span>
         </button>

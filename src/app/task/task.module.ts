@@ -6,6 +6,8 @@ import { TaskHeaderComponent } from './task-header/task-header.component';
 import { TaskHomeComponent } from './task-home/task-home.component';
 import { TaskRoutingModule } from './task-routing.module';
 import { NewTaskComponent } from './new-task/new-task.component';
+import { NewTasklistComponent } from './new-tasklist/new-tasklist.component';
+import { CopyTaskComponent } from './copy-task/copy-task.component';
 
 @NgModule({
   imports: [
@@ -17,10 +19,14 @@ import { NewTaskComponent } from './new-task/new-task.component';
     TaskItemComponent,
     TaskHeaderComponent,
     TaskHomeComponent,
-    NewTaskComponent
+    NewTaskComponent,
+    NewTasklistComponent,
+    CopyTaskComponent
   ],
   entryComponents: [
-    NewTaskComponent
+    NewTaskComponent,
+    NewTasklistComponent,
+    CopyTaskComponent
   ]
 })
 export class TaskModule { }
