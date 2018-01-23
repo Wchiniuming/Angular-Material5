@@ -22,6 +22,7 @@ import {
 } from '@angular/material';
 // import { OverlayContainer } from '@angular/cdk/overlay';
 import { HttpClientModule } from '@angular/common/http';
+import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
 
 
 @NgModule({
@@ -69,6 +70,6 @@ import { HttpClientModule } from '@angular/common/http';
     MatNativeDateModule,
     MatSelectModule
   ],
-  declarations: []
+  declarations: [ConfirmDialogComponent]
 })
 export class SharedModule { }
