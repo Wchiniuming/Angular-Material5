@@ -3,7 +3,11 @@
     <app-task-header
     [header]="list.name"
     (newTask)="openNewTaskDialog()"
-    (copytask)="openCopyTaskDialog()"></app-task-header>
+    (copytask)="openCopyTaskDialog()"
+    (DelTask)="lanchConfirmDialog()"
+    (UpdateTaskLists)="lanchUpdateTaskListDialg()">
+  </app-task-header>
+
     <app-task-item *ngFor="let task of list.tasks" [item]="task"
     (ItemClick)="lanchUpdateDialog(task)"></app-task-item>
   </app-task-list>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material';
 
 @Component({
   selector: 'app-new-tasklist',
@@ -6,10 +7,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./new-tasklist.component.scss']
 })
 export class NewTasklistComponent implements OnInit {
-
-  constructor() { }
+  title = '';
+  constructor(@Inject(MAT_DIALOG_DATA) private data,
+  private dialogRef: MatDialogRef<NewTasklistComponent>) { }
 
   ngOnInit() {
+    this.title = this.data.title;
   }
 
 }

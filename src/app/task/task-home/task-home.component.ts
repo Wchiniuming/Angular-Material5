@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { NewTasklistComponent } from '../new-tasklist/new-tasklist.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
+import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
 
 @Component({
   selector: 'app-task-home',
@@ -126,7 +127,7 @@ export class TaskHomeComponent implements OnInit {
   }
 
   openNewTasklistDialog() {
-    this.dialog.open(NewTasklistComponent);
+    this.dialog.open(NewTasklistComponent,  {data: {title: '新建任务列表'}});
   }
   openCopyTaskDialog() {
     this.dialog.open(CopyTaskComponent, {data: {lists: this.lists}});
@@ -134,5 +135,14 @@ export class TaskHomeComponent implements OnInit {
 
   lanchUpdateDialog(task) {
     this.dialog.open(NewTaskComponent, {data: {title: '修改任务', updatetask: task}});
+  }
+
+  lanchConfirmDialog() {
+    const dialogRef = this.dialog.open(ConfirmDialogComponent, {data: {title: '删除任务', content: '您是否确认删除本任务？'}});
+    dialogRef.afterClosed().subscribe(result => console.log(result));
+  }
+
+  lanchUpdateTaskListDialg() {
+    const dialogRef = this.dialog.open(NewTasklistComponent, {data: {title: '编辑任务列表名称'}});
   }
 }

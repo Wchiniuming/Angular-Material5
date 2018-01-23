@@ -15,7 +15,7 @@
   </div>
 </div>
   <mat-menu #menu="matMenu">
-      <button mat-menu-item>
+      <button mat-menu-item (click)="OnUpdateClick()">
         <mat-icon class="mat-18">mode_edit</mat-icon>
         <span>修改列表名称</span>
       </button>
@@ -23,7 +23,7 @@
           <mat-icon class="mat-18 material-icon" [svgIcon]="'move'"></mat-icon>
           <span>移动列表内容</span>
         </button>
-        <button mat-menu-item>
+        <button mat-menu-item (click)="OnDelClick()">
             <mat-icon class="mat-18">delete_forever</mat-icon>
             <span>删除列表</span>
           </button>

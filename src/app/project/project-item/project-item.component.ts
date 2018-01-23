@@ -10,6 +10,7 @@ export class ProjectItemComponent implements OnInit {
   @Input() item;
   @Output() Invite = new EventEmitter<void>();
   @Output() UpdateProject = new EventEmitter<void>();
+  @Output() DelProj = new EventEmitter<void>();
   constructor() { }
 
   ngOnInit() {
@@ -19,5 +20,8 @@ export class ProjectItemComponent implements OnInit {
   }
   OnUpdateProject() {
     this.UpdateProject.emit();
+  }
+  OnDelClick() {
+    this.DelProj.emit();
   }
 }

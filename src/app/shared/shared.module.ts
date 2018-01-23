@@ -46,7 +46,7 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
   ],
   exports: [
     CommonModule,
@@ -68,7 +68,10 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MatRadioModule,
     MatDatepickerModule,
     MatNativeDateModule,
-    MatSelectModule
+    MatSelectModule,
+  ],
+  entryComponents: [
+    ConfirmDialogComponent
   ],
   declarations: [ConfirmDialogComponent]
 })
