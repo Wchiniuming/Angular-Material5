@@ -122,7 +122,7 @@ export class TaskHomeComponent implements OnInit {
   }
 
   openNewTaskDialog() {
-    this.dialog.open(NewTaskComponent);
+    this.dialog.open(NewTaskComponent, {data: {title: '新建任务'}});
   }
 
   openNewTasklistDialog() {
@@ -130,5 +130,9 @@ export class TaskHomeComponent implements OnInit {
   }
   openCopyTaskDialog() {
     this.dialog.open(CopyTaskComponent, {data: {lists: this.lists}});
+  }
+
+  lanchUpdateDialog(task) {
+    this.dialog.open(NewTaskComponent, {data: {title: '修改任务', updatetask: task}});
   }
 }
