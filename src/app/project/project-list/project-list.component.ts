@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { MatDialog } from '@angular/material';
+import { Component, OnInit, Inject } from '@angular/core';
+import { MatDialog, MAT_DIALOG_DATA } from '@angular/material';
 import { NewProjectComponent } from '../new-project/new-project.component';
 import { InviteComponent } from '../invite/invite.component';
 
@@ -9,7 +9,6 @@ import { InviteComponent } from '../invite/invite.component';
   styleUrls: ['./project-list.component.scss']
 })
 export class ProjectListComponent implements OnInit {
-
   projects = [
     {
       name: 'APP真机测试云建设',
@@ -38,11 +37,15 @@ export class ProjectListComponent implements OnInit {
   }
 
   openNewProjectDialog() {
-    this.dialog.open(NewProjectComponent);
+    this.dialog.open(NewProjectComponent, {data: {title: '新建项目'}});
   }
 
   InviteMember() {
     this.dialog.open(InviteComponent);
+  }
+
+  lanchUpdateProjectDialog() {
+    this.dialog.open(NewProjectComponent, {data: {title: '编辑项目'}});
   }
 
 }
