@@ -1,16 +1,21 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { MatDialog } from '@angular/material';
 import { NewTaskComponent } from '../new-task/new-task.component';
 import { NewTasklistComponent } from '../new-tasklist/new-tasklist.component';
 import { CopyTaskComponent } from '../copy-task/copy-task.component';
 import { ConfirmDialogComponent } from '../../shared/confirm-dialog/confirm-dialog.component';
+import { routerAnim } from '../../animate/router.anim';
 
 @Component({
   selector: 'app-task-home',
   templateUrl: './task-home.component.html',
-  styleUrls: ['./task-home.component.scss']
+  styleUrls: ['./task-home.component.scss'],
+  animations: [
+    routerAnim
+  ]
 })
 export class TaskHomeComponent implements OnInit {
+  @HostBinding('@rtAnim') state;
   lists = [
     {
       id: 1,

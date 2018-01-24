@@ -1,6 +1,6 @@
 <mat-sidenav-container [class.myapp-dark-theme]="darkTheme">
   <mat-sidenav #sidenav mode="over">
-    <app-sidebar></app-sidebar>
+    <app-sidebar (NavClick)="sidenav.toggle()"></app-sidebar>
   </mat-sidenav>
   <mat-sidenav-content>
     <div class="side">

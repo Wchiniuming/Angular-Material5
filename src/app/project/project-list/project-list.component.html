@@ -1,9 +1,10 @@
-<app-project-item 
-(UpdateProject)="lanchUpdateProjectDialog()"
-*ngFor="let project of projects"
-[item]="project" class="card" (Invite)="InviteMember()" (DelProj)="lanchDelProjDialog()">
-
-</app-project-item>
+<div class="container" [@plAnim]="projects.length">
+  <app-project-item 
+  (UpdateProject)="lanchUpdateProjectDialog()"
+  *ngFor="let project of projects"
+  [item]="project" class="card" (Invite)="InviteMember()" (DelProj)="lanchDelProjDialog(project)">
+  </app-project-item>
+</div>
 
 <button class="fat-button" mat-fab type="button" (click)="openNewProjectDialog()">
   <mat-icon class="mat-18">add</mat-icon>
